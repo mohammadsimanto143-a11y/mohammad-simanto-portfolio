@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b14">
+  <title>Mohammad Simanto — Personal Portfolio</title>
+  <meta name="description" content="The personal portfolio of Mohammad Simanto — a student, curious learner, and aspiring AI developer exploring technology, chess, and creative work.">
+  <meta name="author" content="Mohammad Simanto">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Mohammad Simanto — Personal Portfolio">
+  <meta property="og:description" content="Learning, building, and sharing the journey — one project at a time.">
+  <meta property="og:type" content="website">
+  <style>
+    :root{--bg:#090b14;--panel:rgba(255,255,255,.055);--line:rgba(255,255,255,.12);--text:#f4f6ff;--muted:#a5adc5;--blue:#8ba7ff;--cyan:#6ee7e0;--purple:#b9a0ff;--max:1120px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 15% 0%,rgba(72,91,180,.22),transparent 38%),radial-gradient(ellipse at 90% 25%,rgba(64,178,183,.12),transparent 30%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.07)}.brand{font-weight:800;letter-spacing:-.04em;font-size:1.06rem}.brand span{color:var(--cyan)}.navlinks{display:flex;gap:27px;color:var(--muted);font-size:.9rem}.navlinks a:hover{color:white}.menu{display:none;background:none;border:1px solid var(--line);color:white;border-radius:10px;padding:8px 12px}
+    .hero{padding:105px 0 86px;display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:60px;min-height:570px}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:#c3cdfb;border:1px solid rgba(139,167,255,.3);background:rgba(139,167,255,.08);padding:7px 12px;border-radius:999px;font-size:.78rem;letter-spacing:.04em}.dot{width:7px;height:7px;background:var(--cyan);border-radius:50%;box-shadow:0 0 14px var(--cyan)}h1{font-size:clamp(3rem,7vw,5.7rem);letter-spacing:-.075em;line-height:.98;margin:24px 0 22px;font-weight:850}h1 em{font-style:normal;background:linear-gradient(100deg,#a6baff 10%,#83e9e2 90%);background-clip:text;-webkit-background-clip:text;color:transparent}.lead{max-width:590px;color:var(--muted);font-size:1.08rem}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:12px;padding:12px 17px;font-weight:700;font-size:.91rem;border:1px solid var(--line);transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.primary{color:#081019;background:linear-gradient(110deg,#b4c4ff,#8be7e0);border:0}.secondary{background:rgba(255,255,255,.04)}
+    .profile-card{position:relative;padding:27px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.025));box-shadow:0 30px 90px rgba(0,0,0,.28);overflow:hidden}.profile-card:before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:rgba(121,150,255,.16);filter:blur(45px);right:-65px;top:-70px}.orb{height:180px;display:grid;place-items:center;position:relative}.monogram{width:150px;height:150px;border-radius:40px;display:grid;place-items:center;font-size:3.4rem;font-weight:900;letter-spacing:-.1em;background:linear-gradient(145deg,#b6c6ff,#70dcd6);color:#101426;box-shadow:0 20px 65px rgba(108,178,218,.2);transform:rotate(-5deg)}.card-kicker{font-size:.76rem;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}.profile-card h3{font-size:1.35rem;margin:5px 0}.profile-card p{color:var(--muted);font-size:.92rem;margin:0}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}.tag{font-size:.76rem;padding:6px 10px;border-radius:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);color:#d7def7}
+    section{padding:72px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:30px}.section-label{font-size:.76rem;color:var(--cyan);text-transform:uppercase;letter-spacing:.17em;font-weight:800}.section-title{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.055em;line-height:1.1;margin:8px 0 0}.section-desc{max-width:440px;color:var(--muted);margin:0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.tile{padding:24px;border:1px solid var(--line);border-radius:19px;background:var(--panel);transition:transform .2s,border-color .2s}.tile:hover{transform:translateY(-4px);border-color:rgba(139,167,255,.42)}.tile-icon{width:44px;height:44px;display:grid;place-items:center;border-radius:13px;background:rgba(139,167,255,.12);font-size:1.35rem;margin-bottom:20px}.tile h3{margin:0 0 8px;font-size:1.1rem}.tile p{margin:0;color:var(--muted);font-size:.91rem}.status{display:inline-block;margin-top:17px;color:var(--cyan);font-size:.75rem;font-weight:700;letter-spacing:.03em}
+    .about{display:grid;grid-template-columns:.75fr 1.25fr;gap:55px;align-items:start}.about-box{padding:27px;border-radius:22px;border:1px solid var(--line);background:linear-gradient(140deg,rgba(139,167,255,.1),rgba(110,231,224,.035))}.big-quote{font-size:1.5rem;line-height:1.3;letter-spacing:-.04em;font-weight:750}.about-copy{color:var(--muted)}.principles{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}.principle{padding:13px;border:1px solid var(--line);border-radius:12px;color:#dfe4fa;font-size:.86rem}
+    .updates{display:grid;gap:13px}.update{display:grid;grid-template-columns:125px 1fr;gap:22px;padding:20px 22px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.035)}.date{color:var(--cyan);font-size:.78rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}.update h3{margin:0 0 5px;font-size:1.02rem}.update p{margin:0;color:var(--muted);font-size:.9rem}.update .smalltag{display:inline-block;margin-top:9px;font-size:.7rem;color:#c9d4ff;background:rgba(139,167,255,.1);padding:4px 8px;border-radius:6px}
+    .contact{padding:42px;border:1px solid rgba(139,167,255,.23);border-radius:25px;background:radial-gradient(ellipse at 100% 0%,rgba(110,231,224,.12),transparent 45%),rgba(255,255,255,.04);display:flex;justify-content:space-between;align-items:center;gap:28px}.contact h2{font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.1;letter-spacing:-.05em;margin:8px 0}.contact p{color:var(--muted);margin:0;max-width:560px}.footer{padding:28px 0 38px;color:var(--muted);font-size:.82rem;display:flex;justify-content:space-between;gap:20px;border-top:1px solid rgba(255,255,255,.08);margin-top:70px}.footer strong{color:#e9edff}
+    .edit-note{margin-top:18px;padding:13px 15px;border-radius:12px;border:1px dashed rgba(110,231,224,.3);color:#aab6d1;font-size:.82rem}.edit-note b{color:#dffbf8}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;gap:35px;padding:75px 0}.profile-card{max-width:520px}.grid{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr;gap:25px}.section-head{align-items:start;flex-direction:column}.contact{align-items:flex-start;flex-direction:column}.navlinks{gap:14px}}
+    @media(max-width:560px){.wrap{width:min(100% - 28px,var(--max))}.nav{height:68px}.menu{display:block}.navlinks{display:none;position:absolute;top:67px;left:14px;right:14px;padding:17px;background:#111522;border:1px solid var(--line);border-radius:14px;z-index:5;flex-direction:column}.navlinks.open{display:flex}.hero{padding:58px 0}.grid{grid-template-columns:1fr}.update{grid-template-columns:1fr;gap:7px}.principles{grid-template-columns:1fr}.contact{padding:25px}.footer{flex-direction:column}.profile-card{padding:22px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Mohammad Simanto",
+    "url":"https://YOUR-DOMAIN.example",
+    "description":"Student, curious learner, and aspiring AI developer interested in technology, chess, and creative projects."
+  }
+  </script>
+</head>
+<body>
+  <header class="wrap nav">
+    <a class="brand" href="#home" aria-label="Mohammad Simanto home">MOHAMMAD<span>.</span></a>
+    <button class="menu" id="menuBtn" aria-expanded="false" aria-label="Open navigation">Menu ☰</button>
+    <nav class="navlinks" id="navlinks" aria-label="Main navigation">
+      <a href="#about">About</a><a href="#interests">Interests</a><a href="#updates">Updates</a><a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section class="wrap hero" id="home">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> STUDENT · BUILDER · LIFELONG LEARNER</div>
+        <h1>Hi, I'm<br><em>Mohammad Simanto.</em></h1>
+        <p class="lead">I’m learning, creating, and exploring the world of technology—one idea at a time. This is my corner of the internet to share what I’m working on, what I’m learning, and where I’m heading next.</p>
+        <div class="actions">
+          <a class="btn primary" href="#updates">Explore my journey <span aria-hidden="true">↗</span></a>
+          <a class="btn secondary" href="#about">A little about me</a>
+        </div>
+      </div>
+      <aside class="profile-card" aria-label="Profile summary">
+        <div class="orb"><div class="monogram">MS.</div></div>
+        <div class="card-kicker">Currently focused on</div>
+        <h3>Learning today. Building tomorrow.</h3>
+        <p>Science, programming, AI ideas, and creative experiments.</p>
+        <div class="tags"><span class="tag">Class 11 · Science</span><span class="tag">Python</span><span class="tag">Chess</span><span class="tag">AI</span></div>
+      </aside>
+    </section>
+
+    <section id="about">
+      <div class="wrap about">
+        <div class="about-box">
+          <div class="section-label">A quick introduction</div>
+          <p class="big-quote">“Stay curious. Keep practicing. Make progress step by step.”</p>
+          <p class="about-copy">I believe difficult things become easier when I build strong fundamentals and keep showing up.</p>
+        </div>
+        <div>
+          <div class="section-label">About me</div>
+          <h2 class="section-title">Curiosity is my starting point.</h2>
+          <p class="about-copy">I’m a science student who enjoys understanding how things work. I’m especially interested in mathematics and physics, and I’m beginning my coding journey with the long-term dream of creating a helpful personal AI assistant. Outside study, I enjoy chess, photo and video editing, films, and football.</p>
+          <div class="principles">
+            <div class="principle">✦ Learn the fundamentals</div><div class="principle">✦ Build useful projects</div>
+            <div class="principle">✦ Improve through practice</div><div class="principle">✦ Share progress honestly</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="interests">
+      <div class="wrap">
+        <div class="section-head"><div><div class="section-label">What I explore</div><h2 class="section-title">Interests & projects</h2></div><p class="section-desc">A few areas I’m learning about and hope to turn into real projects over time.</p></div>
+        <div class="grid">
+          <article class="tile"><div class="tile-icon">🤖</div><h3>AI & Personal Assistant</h3><p>Exploring Python and the building blocks behind a useful voice-enabled assistant inspired by JARVIS.</p><span class="status">IN PROGRESS</span></article>
+          <article class="tile"><div class="tile-icon">💻</div><h3>Coding & Technology</h3><p>Starting with the basics, practicing consistently, and learning how to turn ideas into working software.</p><span class="status">LEARNING</span></article>
+          <article class="tile"><div class="tile-icon">♟️</div><h3>Chess & Strategy</h3><p>Studying tactics, calculation, positional ideas, and endgames to become a stronger player.</p><span class="status">PRACTICING</span></article>
+          <article class="tile"><div class="tile-icon">📐</div><h3>Physics & Mathematics</h3><p>Building clear concepts, solving problems, and strengthening my science foundation.</p><span class="status">STUDYING</span></article>
+          <article class="tile"><div class="tile-icon">🎬</div><h3>Creative Editing</h3><p>Enjoying photo enhancement, visual design, and video-editing experiments.</p><span class="status">EXPLORING</span></article>
+          <article class="tile"><div class="tile-icon">🌱</div><h3>Personal Growth</h3><p>Improving my English, typing, digital skills, and ability to explain ideas clearly.</p><span class="status">EVERY DAY</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="updates">
+      <div class="wrap">
+        <div class="section-head"><div><div class="section-label">The progress log</div><h2 class="section-title">Latest updates</h2></div><p class="section-desc">A living timeline of what I’m learning and building. Edit these cards whenever you have something new to share.</p></div>
+        <div class="updates" id="updateList">
+          <article class="update"><div class="date">Oct 2026</div><div><h3>Beginning my AI and coding journey</h3><p>Starting from the fundamentals and taking small, practical steps toward building a personal assistant.</p><span class="smalltag">AI · PYTHON</span></div></article>
+          <article class="update"><div class="date">Oct 2026</div><div><h3>Training my chess skills</h3><p>Working on calculation, tactics, and reviewing games to understand mistakes and improve decision-making.</p><span class="smalltag">CHESS · PRACTICE</span></div></article>
+          <article class="update"><div class="date">Ongoing</div><div><h3>Growing as a science student</h3><p>Strengthening my understanding of physics, mathematics, and other Class 11 science subjects.</p><span class="smalltag">LEARNING</span></div></article>
+        </div>
+        <div class="edit-note"><b>Want to update this section?</b> Open <code>index.html</code> in a text editor and edit the cards inside <code>id="updateList"</code>. A simple update guide is included with the website files.</div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap contact">
+        <div><div class="section-label">Let’s connect</div><h2>Good ideas start with curiosity.</h2><p>Have a project idea, a learning resource, or something interesting to share? Add your public contact or social links here when you’re ready.</p></div>
+        <a class="btn primary" href="mailto:YOUR-EMAIL@example.com">Email me <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap footer"><div>© <span id="year"></span> <strong>Mohammad Simanto</strong>. Built with curiosity.</div><div>Designed to grow with the journey ✦</div></footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const menuBtn = document.getElementById('menuBtn');
+    const navlinks = document.getElementById('navlinks');
+    menuBtn.addEventListener('click', () => {
+      const opened = navlinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(opened));
+    });
+    navlinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      navlinks.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }));
+  </script>
+</body>
+</html>
